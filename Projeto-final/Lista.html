@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Propriedades - EasyRent</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Seu arquivo de estilos -->
+</head>
+<body>
+    <h1>Lista de Propriedades</h1>
+
+    <div id="lista-propriedades" class="container">
+        <!-- Aqui serão exibidas as propriedades -->
+    </div>
+
+    <script src="classes.js"></script>
+    <script src="controlador.js"></script>
+    <script src="controladorDetalhes.js"></script>
+    <script src="objetos.js"></script>
+    <script>
+        // Vamos chamar a função do controlador para exibir as propriedades
+        window.onload = function() {
+            exibirListaPropriedades();
+        };
+    </script>
+</body>
+</html>
