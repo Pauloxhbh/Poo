@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - EasyRent</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Login - EasyRent</h1>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <!-- Utilizando um link <a> para simular o login -->
+    <a href="#" onclick="login()">Entrar</a>
+
+    <script src="classes.js"></script>
+    <script src="objetos.js"></script>
+    <script src="controlador.js"></script>
+    <script>
+        function login() {
+            // Lógica de verificação de login aqui
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Exemplo básico de verificação de login
+            // Supondo que você tem um usuário de exemplo "Robert" com senha "senha123"
+            const usuario = listaDeUsuarios.find(user => user.nome_usuario === username && user.senha === password);
+
+            if (usuario) {
+                alert('Login bem-sucedido! Bem-vindo, ' + usuario.nome_usuario + '!');
+                // Redirecionamento para a página de lista de propriedades após o login bem-sucedido
+                window.location.href = 'lista_propriedades.html';
+            } else {
+                alert('Login falhou. Verifique suas credenciais.');
+            }
+        }
+    </script>
+</body>
+</html>
